@@ -41,7 +41,7 @@ const App = () => {
 		<div>
 			<FondoDegradado>
 				<ContenerdorHeader>
-					<h1>Linea de tiempo con fotos - Cumpleaños #27</h1>
+					<h1>Línea de tiempo con fotos - Cumpleaños #27</h1>
 				</ContenerdorHeader>
 				<ContenedorBotones>
 					{data.map((item, index) => (
