@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import image1 from './images/20230207.jpg';
 import image2 from './images/20230331.jpg';
 import image3 from './images/20230524.jpg';
-import image4 from './images/20231107.jpg';
+import image4 from './images/20230525.jpg';
 import image5 from './images/20230705.jpg';
 import image6 from './images/20230815.jpg';
 import image7 from './images/20230828.jpg';
@@ -41,7 +41,7 @@ const App = () => {
 		<div>
 			<FondoDegradado>
 				<ContenerdorHeader>
-					<h1>Linea de tiempo con fotos - Cumpleaños #26</h1>
+					<h1>Linea de tiempo con fotos - Cumpleaños #27</h1>
 				</ContenerdorHeader>
 				<ContenedorBotones>
 					{data.map((item, index) => (
