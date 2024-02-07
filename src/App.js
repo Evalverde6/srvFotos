@@ -63,7 +63,7 @@ const App = () => {
 						<ImagenModal src={item.imagen} />
 					</Modal>
 				))}
-				<p>"Trece años despues, tu y yo"</p>
+				<p>"Trece años después, tú y yo"</p>
 			</FondoDegradado>
 		</div>
 	);
