@@ -64,6 +64,7 @@ const App = () => {
 					</Modal>
 				))}
 				<p>"Trece años después, tú y yo"</p>
+				<p>¿Te animas a ir por trece años más?</p>
 			</FondoDegradado>
 		</div>
 	);
