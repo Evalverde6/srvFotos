@@ -56,13 +56,14 @@ const App = () => {
 						key= {index}
 						estado = {modals[index]}
 						cambiarEstado={() => toggleModal(index)}
-							titulo={item.titulo}
-							mensaje={item.mensaje}
-							imagen={item.imagen}
+						titulo={item.titulo}
+						mensaje={item.mensaje}
+						imagen={item.imagen}
 					>
-					<ImagenModal src={item.imagen} />
-				</Modal>
+						<ImagenModal src={item.imagen} />
+					</Modal>
 				))}
+				<p>"Trece años despues, tu y yo"</p>
 			</FondoDegradado>
 		</div>
 	);
@@ -80,13 +81,17 @@ const FondoDegradado = styled.div`
     background: linear-gradient(to bottom right, #7B68EE, #BA55D3);
     border-radius: 5px;
     z-index: -1; /* Para que esté detrás del contenido del modal */
+	p {
+		text-align: center;
+		color: white;
+	}
 `;
 
 const ContenerdorHeader = styled.div`
 	display: block;
 	widht: 100%;
 	padding-top: 20px;
-	h1 {
+	h1,h2 {
 		text-align: center;
 		color: white;
 	}

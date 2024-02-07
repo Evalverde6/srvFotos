@@ -12,7 +12,7 @@ const Modal = ({children, estado, cambiarEstado, titulo, mensaje, imagen}) => {
     return (
         <>
             {estado && 
-                <Overlay onClick={handleCloseModal}>
+                <Overlay onClick={()=> cambiarEstado(false)}>
                     <ContenedorModal>
                         <EncabezadoModal>
                             <h3>{titulo}</h3>
