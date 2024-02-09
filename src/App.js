@@ -12,18 +12,31 @@ import image6 from './images/20230815.jpg';
 import image7 from './images/20230828.jpg';
 import image8 from './images/20231009.jpg';
 import image9 from './images/20231107.jpg';
+import image10 from './images/20240104.jpg';
+import image11 from './images/20240111.jpg';
+import image12 from './images/20240115.jpg';
+import image13 from './images/20240116.jpg';
+import image14 from './images/20240120.jpg';
+import image15 from './images/20240123.jpg';
+
 
 // Array de datos con información de cada modal
 const data = [
-    { fecha: '07 de Febrero', titulo: 'Nuestra primera visita a la Punta', mensaje: 'Mensaje del modal 1', imagen: image1 },
-    { fecha: '31 de Marzo', titulo: 'Abrazo!', mensaje: 'Mensaje del modal 2', imagen: image2 },
-    { fecha: '24 de Mayo', titulo: 'Disfrutando un chifita', mensaje: 'Mensaje del modal 3', imagen: image3 },
-    { fecha: '25 de Mayo', titulo: 'Partido de Basket', mensaje: 'Mensaje del modal 4', imagen: image4 },
-    { fecha: '05 de Julio', titulo: 'Visita nocturna a la Punta', mensaje: 'Mensaje del modal 5', imagen: image5 },
-	{ fecha: '15 de Agosto', titulo: 'Visita a Biblioteca Nacional', mensaje: 'Mensaje del modal 5', imagen: image6 },
-	{ fecha: '28 de Agosto', titulo: 'Paseo a la playa', mensaje: 'Mensaje del modal 5', imagen: image7 },
-	{ fecha: '09 de Octubre', titulo: 'Celebrando 07 de Julio', mensaje: 'Mensaje del modal 5', imagen: image8 },
-	{ fecha: '07 de Noviembre', titulo: 'Último paseo de noviembre', mensaje: 'Mensaje del modal 5', imagen: image9 }
+    { fecha: '07 de Febrero de 2023', titulo: 'Nuestra primera visita a la Punta', mensaje: 'Mensaje del modal 1', imagen: image1 },
+    { fecha: '31 de Marzo de 2023', titulo: '¡Abrazo!', mensaje: 'Mensaje del modal 2', imagen: image2 },
+    { fecha: '24 de Mayo de 2023', titulo: 'Disfrutando un chifita', mensaje: 'Mensaje del modal 3', imagen: image3 },
+    { fecha: '25 de Mayo de 2023', titulo: 'Partido de Basket', mensaje: 'Mensaje del modal 4', imagen: image4 },
+    { fecha: '05 de Julio de 2023', titulo: 'Visita nocturna a la Punta', mensaje: 'Mensaje del modal 5', imagen: image5 },
+	{ fecha: '15 de Agosto de 2023', titulo: 'Visita a la Biblioteca Nacional - Centro de Lima', mensaje: 'Mensaje del modal 5', imagen: image6 },
+	{ fecha: '28 de Agosto de 2023', titulo: 'Paseo a la playa', mensaje: 'Mensaje del modal 5', imagen: image7 },
+	{ fecha: '09 de Octubre de 2023', titulo: 'Celebrando 07 de Julio', mensaje: 'Mensaje del modal 5', imagen: image8 },
+	{ fecha: '07 de Noviembre de 2023', titulo: 'Último paseo de noviembre', mensaje: 'Mensaje del modal 5', imagen: image9 },
+	{ fecha: '04 de Enero de 2024', titulo: 'Paseo nocturno en el parque voces por el clima', mensaje: 'Mensaje del modal 5', imagen: image10 },
+	{ fecha: '11 de Enero de 2024', titulo: 'Visita a la Biblioteca Nacioanl - San Borja', mensaje: 'Mensaje del modal 5', imagen: image11 },
+	{ fecha: '15 de Enero de 2024', titulo: '¡Conociendo un lugar con vista al mar gratis! - Costa Verde', mensaje: 'Mensaje del modal 5', imagen: image12 },
+	{ fecha: '16 de Enero de 2024', titulo: 'Visita a la Biblioteca Ricardo Palma - Miraflores', mensaje: 'Mensaje del modal 5', imagen: image13 },
+	{ fecha: '20 de Enero de 2024', titulo: 'Disfrutando del Sábado en Chilca ', mensaje: 'Mensaje del modal 5', imagen: image14 },
+	{ fecha: '23 de Enero de 2024', titulo: 'Recorriendo en Miraflores con nuestro nuevo amigo Manuel', mensaje: 'Mensaje del modal 5', imagen: image15 }
 ];
 
 const App = () => {
