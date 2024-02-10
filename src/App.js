@@ -19,27 +19,62 @@ import image13 from './images/20240116.jpg';
 import image14 from './images/20240120.jpg';
 import image15 from './images/20240123.jpg';
 
+const categorias = [
+	{idCategoria: 0, nmCategoria: 'Todos'},
+	{idCategoria: 1, nmCategoria: 'Actividades'},
+	{idCategoria: 2, nmCategoria: 'Bibliotecas'},
+	{idCategoria: 3, nmCategoria: 'Festividades'},
+	{idCategoria: 4, nmCategoria: 'Playa'},
+	{idCategoria: 5, nmCategoria: 'Lugares'},
+	{idCategoria: 6, nmCategoria: 'Otros'}
+]
 
 // Array de datos con información de cada modal
-const data = [
-    { fecha: '07 de Febrero de 2023', titulo: 'Nuestra primera visita a la Punta', mensaje: 'Mensaje del modal 1', imagen: image1 },
-    { fecha: '31 de Marzo de 2023', titulo: '¡Abrazo!', mensaje: 'Mensaje del modal 2', imagen: image2 },
-    { fecha: '24 de Mayo de 2023', titulo: 'Disfrutando un chifita', mensaje: 'Mensaje del modal 3', imagen: image3 },
-    { fecha: '25 de Mayo de 2023', titulo: 'Partido de Basket', mensaje: 'Mensaje del modal 4', imagen: image4 },
-    { fecha: '05 de Julio de 2023', titulo: 'Visita nocturna a la Punta', mensaje: 'Mensaje del modal 5', imagen: image5 },
-	{ fecha: '15 de Agosto de 2023', titulo: 'Visita a la Biblioteca Nacional - Centro de Lima', mensaje: 'Mensaje del modal 5', imagen: image6 },
-	{ fecha: '28 de Agosto de 2023', titulo: 'Paseo a la playa', mensaje: 'Mensaje del modal 5', imagen: image7 },
-	{ fecha: '09 de Octubre de 2023', titulo: 'Celebrando 07 de Julio', mensaje: 'Mensaje del modal 5', imagen: image8 },
-	{ fecha: '07 de Noviembre de 2023', titulo: 'Último paseo de noviembre', mensaje: 'Mensaje del modal 5', imagen: image9 },
-	{ fecha: '04 de Enero de 2024', titulo: 'Paseo nocturno en el parque voces por el clima', mensaje: 'Mensaje del modal 5', imagen: image10 },
-	{ fecha: '11 de Enero de 2024', titulo: 'Visita a la Biblioteca Nacioanl - San Borja', mensaje: 'Mensaje del modal 5', imagen: image11 },
-	{ fecha: '15 de Enero de 2024', titulo: '¡Conociendo un lugar con vista al mar gratis! - Costa Verde', mensaje: 'Mensaje del modal 5', imagen: image12 },
-	{ fecha: '16 de Enero de 2024', titulo: 'Visita a la Biblioteca Ricardo Palma - Miraflores', mensaje: 'Mensaje del modal 5', imagen: image13 },
-	{ fecha: '20 de Enero de 2024', titulo: 'Disfrutando del Sábado en Chilca ', mensaje: 'Mensaje del modal 5', imagen: image14 },
-	{ fecha: '23 de Enero de 2024', titulo: 'Recorriendo en Miraflores con nuestro nuevo amigo Manuel', mensaje: 'Mensaje del modal 5', imagen: image15 }
+const allData = [
+    { fecha: '07 de Febrero de 2023', titulo: 'Nuestra primera visita a la Punta', mensaje: 'Mensaje del modal 1', imagen: image1, idCategoria: 4},
+    { fecha: '31 de Marzo de 2023', titulo: '¡Abrazo!', mensaje: 'Mensaje del modal 2', imagen: image2, idCategoria: 6},
+    { fecha: '24 de Mayo de 2023', titulo: 'Disfrutando un chifita', mensaje: 'Mensaje del modal 3', imagen: image3, idCategoria: 6},
+    { fecha: '25 de Mayo de 2023', titulo: 'Partido de Basket', mensaje: 'Mensaje del modal 4', imagen: image4, idCategoria: 1},
+    { fecha: '05 de Julio de 2023', titulo: 'Visita nocturna a la Punta', mensaje: 'Mensaje del modal 5', imagen: image5, idCategoria: 4},
+	{ fecha: '15 de Agosto de 2023', titulo: 'Visita a la Biblioteca Nacional - Centro de Lima', mensaje: 'Mensaje del modal 5', imagen: image6, idCategoria: 2},
+	{ fecha: '28 de Agosto de 2023', titulo: 'Paseo a la playa', mensaje: 'Mensaje del modal 5', imagen: image7, idCategoria: 4},
+	{ fecha: '09 de Octubre de 2023', titulo: 'Celebrando 07 de Julio', mensaje: 'Mensaje del modal 5', imagen: image8, idCategoria: 3},
+	{ fecha: '07 de Noviembre de 2023', titulo: 'Último paseo de noviembre', mensaje: 'Mensaje del modal 5', imagen: image9, idCategoria: 6},
+	{ fecha: '04 de Enero de 2024', titulo: 'Paseo nocturno en el parque voces por el clima', mensaje: 'Mensaje del modal 5', imagen: image10, idCategoria: 5},
+	{ fecha: '11 de Enero de 2024', titulo: 'Visita a la Biblioteca Nacinal - San Borja', mensaje: 'Mensaje del modal 5', imagen: image11, idCategoria: 2},
+	{ fecha: '15 de Enero de 2024', titulo: '¡Conociendo un lugar con vista al mar gratis! - Costa Verde', mensaje: 'Mensaje del modal 5', imagen: image12, idCategoria: 4},
+	{ fecha: '16 de Enero de 2024', titulo: 'Visita a la Biblioteca Ricardo Palma - Miraflores', mensaje: 'Mensaje del modal 5', imagen: image13, idCategoria: 2},
+	{ fecha: '20 de Enero de 2024', titulo: 'Disfrutando del Sábado en Chilca ', mensaje: 'Mensaje del modal 5', imagen: image14, idCategoria: 4},
+	{ fecha: '23 de Enero de 2024', titulo: 'Recorriendo Miraflores con nuestro nuevo amigo Manuel', mensaje: 'Mensaje del modal 5', imagen: image15, idCategoria: 6}
+	
 ];
 
+const SlcCategorias = ({categorias, onCategoriaChange}) => {
+    const handleCategoriaChange = (event) => {
+        const selectedCategoria = parseInt(event.target.value, 10);
+        onCategoriaChange(selectedCategoria);
+    };
+
+    return (
+        <select onChange={handleCategoriaChange}>
+            {categorias.map((categoria) => (
+                <option key={categoria.idCategoria} value={categoria.idCategoria}>
+                    {categoria.nmCategoria}
+                </option>
+            ))}
+        </select>
+    );
+};
+
 const App = () => {
+	
+	const [catSlc, setCatSlc] = useState(0);
+
+    const handleCategoriaChange = (selectedCategoria) => {
+        setCatSlc(selectedCategoria);
+    };
+
+	const data = catSlc ===  0? allData : allData.filter(x => x.idCategoria === catSlc)
 	const [modals, setModals] = useState(new Array(data.length).fill(false));
 
 	// Función para alternar la visibilidad de los modales
@@ -56,6 +91,7 @@ const App = () => {
 				<ContenerdorHeader>
 					<h1>Línea de tiempo con fotos - Cumpleaños #27</h1>
 				</ContenerdorHeader>
+				<SlcCategorias categorias={categorias} onCategoriaChange = {handleCategoriaChange} />
 				<ContenedorBotones>
 					{data.map((item, index) => (
 						<Boton key={index} onClick={() => toggleModal(index)}>
