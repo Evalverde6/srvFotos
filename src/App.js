@@ -118,11 +118,12 @@ const App = () => {
 						<ImagenModal src={item.imagen} />
 					</Modal>
 				))}
+				{/*
 				<ContenedorTimer>
 					<p>Tiempo restante para vernos</p>
 					<Countdown targetDate={targetDate}/>
 				</ContenedorTimer>
-					
+				*/}
 				<p>"Trece años después, tú y yo"</p>
 				<p>¿Te animas a ir por trece años más?</p>
 			</FondoDegradado>
