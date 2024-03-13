@@ -1,0 +1,18 @@
+.countdown-container {
+    display: flex;
+    justify-content: space-between;
+    width: 200px; /* ajusta según tus necesidades */
+}
+
+.countdown-item {
+    text-align: center;
+    margin: 5px; /* ajusta según tus necesidades */
+}
+
+.countdown-item p {
+    font-size: 18px; /* ajusta según tus necesidades */
+}
+
+.countdown-item span {
+    font-size: 12px; /* ajusta según tus necesidades */
+}

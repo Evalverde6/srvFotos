@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Modal from './Componentes/Modal';
 import styled from 'styled-components';
 
+
 // Importar imágenes
 import image1 from './images/20230207.jpg';
 import image2 from './images/20230331.jpg';
@@ -18,6 +19,8 @@ import image12 from './images/20240115.jpg';
 import image13 from './images/20240116.jpg';
 import image14 from './images/20240120.jpg';
 import image15 from './images/20240123.jpg';
+
+import Countdown from './Componentes/Countdown';
 
 const categorias = [
 	{idCategoria: 0, nmCategoria: 'Todos'},
@@ -69,7 +72,7 @@ const SlcCategorias = ({categorias, onCategoriaChange}) => {
 const App = () => {
 	
 	const [catSlc, setCatSlc] = useState(0);
-
+	const targetDate = "2024-02-29T12:00:00";
     const handleCategoriaChange = (selectedCategoria) => {
         setCatSlc(selectedCategoria);
     };
@@ -83,6 +86,9 @@ const App = () => {
         newModals[index] = !newModals[index];
         setModals(newModals);
     };
+
+	
+	
 
 	return (
 
@@ -112,6 +118,11 @@ const App = () => {
 						<ImagenModal src={item.imagen} />
 					</Modal>
 				))}
+				<ContenedorTimer>
+					<p>Tiempo restante para vernos</p>
+					<Countdown targetDate={targetDate}/>
+				</ContenedorTimer>
+					
 				<p>"Trece años después, tú y yo"</p>
 				<p>¿Te animas a ir por trece años más?</p>
 			</FondoDegradado>
@@ -122,6 +133,19 @@ const App = () => {
 export default App;
 
 //Estilos
+const ContenedorTimer = styled.div`
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+
+	p {
+		margin-bottom: 10px;
+	}
+`;
 const FondoDegradado = styled.div`
     position: absolute;
     top: 0;
