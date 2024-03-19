@@ -95,7 +95,7 @@ const App = () => {
 		<div>
 			<FondoDegradado>
 				<ContenerdorHeader>
-					<h1>Línea de tiempo con fotos - Cumpleaños #27</h1>
+					<h1>Línea de tiempo con fotos - Cumpleaños #28</h1>
 				</ContenerdorHeader>
 				<SlcCategorias categorias={categorias} onCategoriaChange = {handleCategoriaChange} />
 				<ContenedorBotones>
